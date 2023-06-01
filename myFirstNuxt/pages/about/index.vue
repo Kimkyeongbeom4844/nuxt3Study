@@ -13,7 +13,7 @@
 
 <script setup>
 definePageMeta({
-  middleware: "auth", // 기본값은 default
+  middleware: ["auth"],
 });
 const inputText = ref("");
 const isHelloGET = ref(false);
@@ -21,10 +21,10 @@ const { data, pending, error, refresh } = await useFetch("/api/hello", {
   method: "GET",
   lazy: true,
   immediate: false,
-  onRequest: ({ request }) => {
+  onRequest: ({ request, response }) => {
     isHelloGET.value = true;
   },
-  onResponse: ({ response }) => {
+  onResponse: ({ request, response }) => {
     console.log(response);
   },
 });
