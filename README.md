@@ -19,11 +19,23 @@
 
 이렇게 쓰면 된다
 
-## @
+## [alias](https://nuxt.com/docs/api/configuration/nuxt-config#alias)
 
 `Nuxt3`에서는 `@`를 사용하면 루트디렉토리 시작의 절대경로를 사용할 수 있다.
 
 이것을 통해 쉽게 다른 파일들을 쉽게 `import`를 할 수 있다.
+
+참고로 공식문서에는 아래처럼 하면 된다 한다
+```json
+{
+  "~~": "/<rootDir>",
+  "@@": "/<rootDir>",
+  "~": "/<rootDir>",
+  "@": "/<rootDir>",
+  "assets": "/<rootDir>/assets",
+  "public": "/<rootDir>/public"
+}
+```
 
 ## assets, public
 
@@ -31,8 +43,8 @@
 
 ```javascript
 <script setup lang="ts">
-  import bg from '@/assets/images/logo.png'; //assets 참조 
-  import test from '/images/test.png' //public 참조
+  import logo from 'assets/images/logo.png'; //assets 참조 
+  import test from 'public/images/test.png' //public 참조
 </script>
 ```
 
