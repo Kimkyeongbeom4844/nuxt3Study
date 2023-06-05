@@ -19,16 +19,20 @@
 
 이렇게 쓰면 된다
 
+## @
+
+`Nuxt3`에서는 `@`를 사용하면 루트디렉토리 시작의 절대경로를 사용할 수 있다.
+
+이것을 통해 쉽게 다른 파일들을 쉽게 `import`를 할 수 있다.
+
 ## assets, public
 
 `assets`내부는 번들링과정 최적화되며 `public`내부는 최적화 안됨
 
-대신 `public`내부에 있는 파일은 `절대경로`로 참조 가능하다
-
 ```javascript
 <script setup lang="ts">
-  import bg from '@/assets/images/logo.png'; //assets 참조 import test from
-  '/images/test.png' //public 참조
+  import bg from '@/assets/images/logo.png'; //assets 참조 
+  import test from '/images/test.png' //public 참조
 </script>
 ```
 
