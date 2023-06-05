@@ -4,9 +4,9 @@
 
 ## app.vue
 
-`NextJS 13`처럼 없어도 된다. 뼈대는 `layouts/default.layout`으로 고정
+`NextJS 13`처럼 없어도 된다. 기본 뼈대는 `layouts/default.layout`이며, 메인 컴포넌트인`pages/index.vue`가 무조건 존재해야 된다
 
-만약 사용하게 되면
+만약 최상단 루트에 `app.vue`를 사용하게 되면
 
 ```javascript
 //app.vue
